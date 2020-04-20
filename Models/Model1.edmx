@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="babblefishModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ITEMCODE_MAS_NS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="MAS" Type="nvarchar" MaxLength="255" />
+          <Property Name="NETSUITE" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Inactive" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Display Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="255" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAS Vendor Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="Base Price" Type="float" />
+          <Property Name="External ID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Internal ID" Type="float" Nullable="false" />
+          <Property Name="Purchase Price" Type="nvarchar" MaxLength="255" />
+          <Property Name="Vendor Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="babblefishModelStoreContainer">
+          <EntitySet Name="ITEMCODE_MAS_NS" EntityType="Self.ITEMCODE_MAS_NS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="babblefishModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Inactive" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Display_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAS_Vendor_Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Base_Price" Type="Double" />
+          <Property Name="External_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Internal_ID" Type="Double" Nullable="false" />
+          <Property Name="Purchase_Price" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Vendor_Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="babblefishEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Items" EntityType="babblefishModel.Item" />
+          <EntitySet Name="ITEMCODE_MAS_NS" EntityType="babblefishModel.ITEMCODE_MAS_NS" />
+        </EntityContainer>
+        <EntityType Name="ITEMCODE_MAS_NS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="MAS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NETSUITE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="babblefishModelStoreContainer" CdmEntityContainer="babblefishEntities">
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="babblefishModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Display_Name" ColumnName="Display Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="MAS_Vendor_Code" ColumnName="MAS Vendor Code" />
+                <ScalarProperty Name="Base_Price" ColumnName="Base Price" />
+                <ScalarProperty Name="External_ID" ColumnName="External ID" />
+                <ScalarProperty Name="Internal_ID" ColumnName="Internal ID" />
+                <ScalarProperty Name="Purchase_Price" ColumnName="Purchase Price" />
+                <ScalarProperty Name="Vendor_Code" ColumnName="Vendor Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEMCODE_MAS_NS">
+            <EntityTypeMapping TypeName="babblefishModel.ITEMCODE_MAS_NS">
+              <MappingFragment StoreEntitySet="ITEMCODE_MAS_NS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="NETSUITE" ColumnName="NETSUITE" />
+                <ScalarProperty Name="MAS" ColumnName="MAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebApplication6.Models.ITEMCODE_MAS_NS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>Index ItemCodes MAS -> Netsuite</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @using(Html.BeginForm("Index", "ITEMCODE", FormMethod.Post))
+    {
+        @Html.TextBox("itemCode")
+        <input type="submit" value="Submit ItemCode" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NETSUITE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateUpdated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NETSUITE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateUpdated)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
