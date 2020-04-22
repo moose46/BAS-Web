@@ -56,8 +56,8 @@
           <Property Name="Location" Type="nvarchar" MaxLength="255" />
           <Property Name="couponcode" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="promocode" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="discount-discountItem" Type="nvarchar" MaxLength="255" />
-          <Property Name="discount-discountrate" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="discount_discountItem" Type="nvarchar" MaxLength="255" />
+          <Property Name="discount_discountrate" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="itemLine_item" Type="nvarchar" MaxLength="255" />
           <Property Name="xlated_part" Type="nvarchar" MaxLength="255" />
           <Property Name="final_part" Type="nvarchar" MaxLength="4000" />
@@ -73,9 +73,9 @@
           <Property Name="itemLine_department" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="itemLine_class" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="itemLine_location" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="itemLine_custom:Field Name" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="itemLine_custom:Field Name1" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="itemLine_custom:Field Name2" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="itemLine_custom_Field_Name" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="itemLine_custom_Field_Name1" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="itemLine_custom_Field_Name2" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="shipdate" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="shipcarrier" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="shipmethod" Type="varchar" MaxLength="1" Nullable="false" />
@@ -112,9 +112,9 @@
           <Property Name="fax" Type="nvarchar" MaxLength="255" />
           <Property Name="customermessage" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="custbody_nsts_ci_exclude" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="custom:Field Name" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="custom:Field Name1" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="custom:Field Name2" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="custom_Field_Name" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="custom_Field_Name1" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="custom_Field_Name2" Type="varchar" MaxLength="1" Nullable="false" />
           <Property Name="LineSeqNo" Type="nvarchar" MaxLength="255" />
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
@@ -544,9 +544,9 @@
               <MappingFragment StoreEntitySet="SO_COOKED">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="LineSeqNo" ColumnName="LineSeqNo" />
-                <ScalarProperty Name="custom_Field_Name2" ColumnName="custom:Field Name2" />
-                <ScalarProperty Name="custom_Field_Name1" ColumnName="custom:Field Name1" />
-                <ScalarProperty Name="custom_Field_Name" ColumnName="custom:Field Name" />
+                <ScalarProperty Name="custom_Field_Name2" ColumnName="custom_Field_Name2" />
+                <ScalarProperty Name="custom_Field_Name1" ColumnName="custom_Field_Name1" />
+                <ScalarProperty Name="custom_Field_Name" ColumnName="custom_Field_Name" />
                 <ScalarProperty Name="custbody_nsts_ci_exclude" ColumnName="custbody_nsts_ci_exclude" />
                 <ScalarProperty Name="customermessage" ColumnName="customermessage" />
                 <ScalarProperty Name="fax" ColumnName="fax" />
@@ -583,9 +583,9 @@
                 <ScalarProperty Name="shipmethod" ColumnName="shipmethod" />
                 <ScalarProperty Name="shipcarrier" ColumnName="shipcarrier" />
                 <ScalarProperty Name="shipdate" ColumnName="shipdate" />
-                <ScalarProperty Name="itemLine_custom_Field_Name2" ColumnName="itemLine_custom:Field Name2" />
-                <ScalarProperty Name="itemLine_custom_Field_Name1" ColumnName="itemLine_custom:Field Name1" />
-                <ScalarProperty Name="itemLine_custom_Field_Name" ColumnName="itemLine_custom:Field Name" />
+                <ScalarProperty Name="itemLine_custom_Field_Name2" ColumnName="itemLine_custom_Field_Name2" />
+                <ScalarProperty Name="itemLine_custom_Field_Name1" ColumnName="itemLine_custom_Field_Name1" />
+                <ScalarProperty Name="itemLine_custom_Field_Name" ColumnName="itemLine_custom_Field_Name" />
                 <ScalarProperty Name="itemLine_location" ColumnName="itemLine_location" />
                 <ScalarProperty Name="itemLine_class" ColumnName="itemLine_class" />
                 <ScalarProperty Name="itemLine_department" ColumnName="itemLine_department" />
@@ -601,8 +601,8 @@
                 <ScalarProperty Name="final_part" ColumnName="final_part" />
                 <ScalarProperty Name="xlated_part" ColumnName="xlated_part" />
                 <ScalarProperty Name="itemLine_item" ColumnName="itemLine_item" />
-                <ScalarProperty Name="discount_discountrate" ColumnName="discount-discountrate" />
-                <ScalarProperty Name="discount_discountItem" ColumnName="discount-discountItem" />
+                <ScalarProperty Name="discount_discountrate" ColumnName="discount_discountrate" />
+                <ScalarProperty Name="discount_discountItem" ColumnName="discount_discountItem" />
                 <ScalarProperty Name="promocode" ColumnName="promocode" />
                 <ScalarProperty Name="couponcode" ColumnName="couponcode" />
                 <ScalarProperty Name="Location" ColumnName="Location" />

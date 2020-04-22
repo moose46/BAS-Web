@@ -4,10 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Index SO_COOKED</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @using (Html.BeginForm("Index", "SO_COOKED", FormMethod.Post))
+    {
+        @Html.TextBox("SalesOrderNo")
+        <input type="submit" value="Submit OrderNo" />
+    }
 </p>
 <table class="table">
     <tr>

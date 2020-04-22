@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.WebPages;
 using WebApplication6.Models;
 
 namespace WebApplication6.Controllers
@@ -20,7 +21,19 @@ namespace WebApplication6.Controllers
 
            // return View(db.Database.SqlQuery<SO_COOKED>("select top (10) * from so_cooked").ToList());
 
-            return View(db.SO_COOKED.ToList().Take(100));
+            return View(db.SO_COOKED.ToList().Take(1));
+        }
+        [HttpPost]
+        public ActionResult Index(string SalesOrderNo)
+        {
+            if(SalesOrderNo.IsEmpty())
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            // return View(db.Database.SqlQuery<SO_COOKED>("select top (10) * from so_cooked").ToList());
+
+            return View(db.Database.SqlQuery<SO_COOKED>("FindCookedSalesOrderByOrderNo " + SalesOrderNo.ToUpper()).ToList());
         }
 
         // GET: SO_COOKED/Details/5

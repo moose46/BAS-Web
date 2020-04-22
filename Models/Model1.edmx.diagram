@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6f5e0a23eac24de283c392161412764b" Name="Diagram1">
+      <Diagram DiagramId="6f5e0a23eac24de283c392161412764b" Name="Diagram1" ZoomLevel="128">
         <EntityTypeShape EntityType="babblefishModel.Item" Width="1.5" PointX="3.375" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="babblefishModel.ITEMCODE_MAS_NS" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="babblefishModel.SO_SalesOrderDetail" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="babblefishModel.SO_COOKED" Width="1.5" PointX="5.625" PointY="0.75" />
+        <EntityTypeShape EntityType="babblefishModel.SO_COOKED" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
