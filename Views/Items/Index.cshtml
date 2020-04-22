@@ -23,12 +23,6 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Display_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
@@ -49,9 +43,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Vendor_Code)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id)
-        </th>
         <th></th>
     </tr>
 
@@ -59,12 +50,6 @@
 <tr>
    <td>
         @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Display_Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Type)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Description)
@@ -86,9 +71,6 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Vendor_Code)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Id)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

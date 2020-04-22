@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebApplication6.Models.SO_SalesOrderDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sales Order Detail</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @using (Html.BeginForm("Index", "SO_SalesOrderDetail", FormMethod.Post))
+    {
+        @Html.TextBox("itemCode")
+        <input type="submit" value="Submit ItemCode" />
+    }
+</p>
+<table class="table">
+    <tr>
+         <th>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemCodeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WarehouseCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APDivisionNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VendorNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxRate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemCode)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.ItemCodeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WarehouseCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APDivisionNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaxRate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new {  SalesOrderNo=item.SalesOrderNo , LineKey=item.LineKey }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

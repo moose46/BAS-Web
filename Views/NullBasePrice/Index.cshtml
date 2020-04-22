@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication6.Models.spNetSuiteItemsWithNullBasePrice_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InternalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExternalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.base_price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InternalID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExternalID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.base_price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
+        </td>
+    </tr>
+}
+
+</table>

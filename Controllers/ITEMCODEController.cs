@@ -17,7 +17,8 @@ namespace WebApplication6.Controllers
         // GET: ITEMCODE
         public ActionResult Index()
         {
-            return View(db.ITEMCODE_MAS_NS.ToList());
+            return View(db.Database.SqlQuery<ITEMCODE_MAS_NS>("select * from ITEMCODE_MAS_NS where MAS like '123%'").ToList());
+            //return View(db.ITEMCODE_MAS_NS.ToList());
         }
         [HttpPost]
         public ActionResult Index(string itemCode)

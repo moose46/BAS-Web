@@ -12,6 +12,8 @@ namespace WebApplication6.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class babblefishEntities : DbContext
     {
@@ -27,5 +29,12 @@ namespace WebApplication6.Models
     
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<ITEMCODE_MAS_NS> ITEMCODE_MAS_NS { get; set; }
+        public virtual DbSet<SO_SalesOrderDetail> SO_SalesOrderDetail { get; set; }
+        public virtual DbSet<SO_COOKED> SO_COOKED { get; set; }
+    
+        public virtual ObjectResult<spNetSuiteItemsWithNullBasePrice_Result> spNetSuiteItemsWithNullBasePrice()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spNetSuiteItemsWithNullBasePrice_Result>("spNetSuiteItemsWithNullBasePrice");
+        }
     }
 }

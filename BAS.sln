@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication6", "WebApplication6.csproj", "{D5E37CFF-E0A0-4A45-9479-EF8DF1CFB905}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAS", "BAS.csproj", "{D5E37CFF-E0A0-4A45-9479-EF8DF1CFB905}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

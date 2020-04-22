@@ -1,0 +1,600 @@
+﻿@model WebApplication6.Models.SO_SalesOrderDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SO_SalesOrderDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LineSeqNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineSeqNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCodeDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemCodeDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtendedDescriptionKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtendedDescriptionKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Commissionable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commissionable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectToExemption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectToExemption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarehouseCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarehouseCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterOrderLineKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterOrderLineKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitOfMeasure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitOfMeasure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropShip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropShip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrintDropShipment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrintDropShipment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesKitLineKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesKitLineKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostOfGoodsSoldAcctKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostOfGoodsSoldAcctKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesAcctKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesAcctKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceOverridden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceOverridden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExplodedKitItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExplodedKitItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StandardKitBill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StandardKitBill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Revision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Revision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillOption9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillOption9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackorderKitCompLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackorderKitCompLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SkipPrintCompLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SkipPrintCompLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PromiseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PromiseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AliasItemNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AliasItemNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOHistoryDetlSeqNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOHistoryDetlSeqNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerAction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerAction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemAction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemAction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarrantyCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarrantyCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirationOverridden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirationOverridden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostOverridden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostOverridden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityOrdered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityOrdered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityShipped)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityShipped)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityBackordered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityBackordered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterOriginalQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterOriginalQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterQtyBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterQtyBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasterQtyOrderedToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasterQtyOrderedToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatingQtyShippedToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatingQtyShippedToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtensionAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtensionAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitOfMeasureConvFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitOfMeasureConvFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityPerBill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityPerBill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineDiscountPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineDiscountPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valuation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valuation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotSerialFullyDistributed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotSerialFullyDistributed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APDivisionNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APDivisionNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseOrderNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseOrderNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseOrderRequiredDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseOrderRequiredDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommodityCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommodityCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternateTaxIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlternateTaxIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxTypeApplied)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxTypeApplied)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetGrossIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetGrossIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DebitCreditIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebitCreditIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxRate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebApplication6.Models.SO_COOKED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.externalid)
+        </th>
+      <th>
+            @Html.DisplayNameFor(model => model.itemLine_item)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.xlated_part)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.final_part)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemLine_amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemLine_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetSuiteDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineSeqNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.externalid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemLine_item)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.xlated_part)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.final_part)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemLine_amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemLine_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetSuiteDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineSeqNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

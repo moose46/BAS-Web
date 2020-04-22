@@ -131,6 +131,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ITEMCODEController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\NullBasePriceController.cs" />
+    <Compile Include="Controllers\SO_COOKEDController.cs" />
+    <Compile Include="Controllers\SO_SalesOrderDetailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,10 +158,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model2.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.tt</DependentUpon>
+    <Compile Include="Models\SO_COOKED.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SO_SalesOrderDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spNetSuiteItemsWithNullBasePrice_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,10 +187,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model2.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -229,6 +232,17 @@
     <Content Include="Views\ITEMCODE\Details.cshtml" />
     <Content Include="Views\ITEMCODE\Edit.cshtml" />
     <Content Include="Views\ITEMCODE\Index.cshtml" />
+    <Content Include="Views\SO_SalesOrderDetail\Create.cshtml" />
+    <Content Include="Views\SO_SalesOrderDetail\Delete.cshtml" />
+    <Content Include="Views\SO_SalesOrderDetail\Details.cshtml" />
+    <Content Include="Views\SO_SalesOrderDetail\Edit.cshtml" />
+    <Content Include="Views\SO_SalesOrderDetail\Index.cshtml" />
+    <Content Include="Views\NullBasePrice\Index.cshtml" />
+    <Content Include="Views\SO_COOKED\Create.cshtml" />
+    <Content Include="Views\SO_COOKED\Delete.cshtml" />
+    <Content Include="Views\SO_COOKED\Details.cshtml" />
+    <Content Include="Views\SO_COOKED\Edit.cshtml" />
+    <Content Include="Views\SO_COOKED\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
